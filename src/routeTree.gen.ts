@@ -9,38 +9,155 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TiendaRouteImport } from './routes/tienda'
+import { Route as SobreLaMarcaRouteImport } from './routes/sobre-la-marca'
+import { Route as FormacionRouteImport } from './routes/formacion'
+import { Route as EmpiezaConStarpilRouteImport } from './routes/empieza-con-starpil'
+import { Route as CarritoRouteImport } from './routes/carrito'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProductoSlugRouteImport } from './routes/producto.$slug'
 
+const TiendaRoute = TiendaRouteImport.update({
+  id: '/tienda',
+  path: '/tienda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreLaMarcaRoute = SobreLaMarcaRouteImport.update({
+  id: '/sobre-la-marca',
+  path: '/sobre-la-marca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormacionRoute = FormacionRouteImport.update({
+  id: '/formacion',
+  path: '/formacion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpiezaConStarpilRoute = EmpiezaConStarpilRouteImport.update({
+  id: '/empieza-con-starpil',
+  path: '/empieza-con-starpil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarritoRoute = CarritoRouteImport.update({
+  id: '/carrito',
+  path: '/carrito',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductoSlugRoute = ProductoSlugRouteImport.update({
+  id: '/producto/$slug',
+  path: '/producto/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/carrito': typeof CarritoRoute
+  '/empieza-con-starpil': typeof EmpiezaConStarpilRoute
+  '/formacion': typeof FormacionRoute
+  '/sobre-la-marca': typeof SobreLaMarcaRoute
+  '/tienda': typeof TiendaRoute
+  '/producto/$slug': typeof ProductoSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/carrito': typeof CarritoRoute
+  '/empieza-con-starpil': typeof EmpiezaConStarpilRoute
+  '/formacion': typeof FormacionRoute
+  '/sobre-la-marca': typeof SobreLaMarcaRoute
+  '/tienda': typeof TiendaRoute
+  '/producto/$slug': typeof ProductoSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/carrito': typeof CarritoRoute
+  '/empieza-con-starpil': typeof EmpiezaConStarpilRoute
+  '/formacion': typeof FormacionRoute
+  '/sobre-la-marca': typeof SobreLaMarcaRoute
+  '/tienda': typeof TiendaRoute
+  '/producto/$slug': typeof ProductoSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/carrito'
+    | '/empieza-con-starpil'
+    | '/formacion'
+    | '/sobre-la-marca'
+    | '/tienda'
+    | '/producto/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/carrito'
+    | '/empieza-con-starpil'
+    | '/formacion'
+    | '/sobre-la-marca'
+    | '/tienda'
+    | '/producto/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/carrito'
+    | '/empieza-con-starpil'
+    | '/formacion'
+    | '/sobre-la-marca'
+    | '/tienda'
+    | '/producto/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CarritoRoute: typeof CarritoRoute
+  EmpiezaConStarpilRoute: typeof EmpiezaConStarpilRoute
+  FormacionRoute: typeof FormacionRoute
+  SobreLaMarcaRoute: typeof SobreLaMarcaRoute
+  TiendaRoute: typeof TiendaRoute
+  ProductoSlugRoute: typeof ProductoSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tienda': {
+      id: '/tienda'
+      path: '/tienda'
+      fullPath: '/tienda'
+      preLoaderRoute: typeof TiendaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre-la-marca': {
+      id: '/sobre-la-marca'
+      path: '/sobre-la-marca'
+      fullPath: '/sobre-la-marca'
+      preLoaderRoute: typeof SobreLaMarcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formacion': {
+      id: '/formacion'
+      path: '/formacion'
+      fullPath: '/formacion'
+      preLoaderRoute: typeof FormacionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empieza-con-starpil': {
+      id: '/empieza-con-starpil'
+      path: '/empieza-con-starpil'
+      fullPath: '/empieza-con-starpil'
+      preLoaderRoute: typeof EmpiezaConStarpilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carrito': {
+      id: '/carrito'
+      path: '/carrito'
+      fullPath: '/carrito'
+      preLoaderRoute: typeof CarritoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +165,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/producto/$slug': {
+      id: '/producto/$slug'
+      path: '/producto/$slug'
+      fullPath: '/producto/$slug'
+      preLoaderRoute: typeof ProductoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CarritoRoute: CarritoRoute,
+  EmpiezaConStarpilRoute: EmpiezaConStarpilRoute,
+  FormacionRoute: FormacionRoute,
+  SobreLaMarcaRoute: SobreLaMarcaRoute,
+  TiendaRoute: TiendaRoute,
+  ProductoSlugRoute: ProductoSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
