@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Check, ShoppingBag, Zap } from "lucide-react";
-import { getProduct, products } from "@/lib/products";
+import { getProduct, products, type Product } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 import { trackPixel } from "@/lib/pixel";
 
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/producto/$slug")({
 });
 
 function ProductPage() {
-  const { product } = Route.useLoaderData();
+  const { product } = Route.useLoaderData() as { product: Product };
   const { add } = useCart();
   const [qty, setQty] = useState(1);
 
