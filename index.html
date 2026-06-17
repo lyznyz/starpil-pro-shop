@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Starpil · Lyznyz Academia · Tienda Online</title>
+<meta name="description" content="Tienda oficial Starpil distribuida por Lyznyz Academia. Ceras, pre y post depilatorios profesionales. Pagos en USD y Bolívares, envíos a toda Venezuela." />
+<link rel="icon" href="images/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3282700515215644');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3282700515215644&ev=PageView&noscript=1"/></noscript>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --crema:#f6efe6; --crema-2:#efe5d6; --tinta:#1a1612; --borgo:#7a1f2b;
+  --borgo-2:#5c1620; --texto:#3a2e26; --muted:#6b5d52; --linea:#e3d6c4;
+}
+html,body{background:var(--crema);color:var(--texto);font-family:'Manrope',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Fraunces',serif;color:var(--tinta);letter-spacing:-.01em;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(246,239,230,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1180px;margin:0 auto;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:46px;width:auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-text strong{font-family:'Fraunces',serif;font-size:18px;color:var(--tinta)}
+.brand-text span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--borgo)}
+.nav-links{display:flex;gap:24px;font-size:14px;font-weight:500}
+.nav-links a:hover{color:var(--borgo)}
+.cta-wa{background:var(--borgo);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.02em;transition:.2s}
+.cta-wa:hover{background:var(--borgo-2)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f6efe6 0%,#efe1cb 60%,#e8d5b8 100%);padding:60px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+@media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:30px;text-align:center}}
+.eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--borgo);background:#fff;padding:8px 16px;border-radius:999px;border:1px solid var(--linea);margin-bottom:20px}
+.hero h1{font-size:clamp(38px,5.4vw,68px);font-weight:700;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--borgo)}
+.hero p{font-size:17px;color:var(--muted);max-width:520px;margin-bottom:28px}
+@media(max-width:880px){.hero p{margin-left:auto;margin-right:auto}}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:880px){.hero-ctas{justify-content:center}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:14px;transition:.2s;cursor:pointer;border:none}
+.btn-primary{background:var(--tinta);color:var(--crema)}
+.btn-primary:hover{background:var(--borgo)}
+.btn-outline{background:transparent;color:var(--tinta);border:1.5px solid var(--tinta)}
+.btn-outline:hover{background:var(--tinta);color:var(--crema)}
+.hero-img{position:relative}
+.hero-img img{width:100%;max-width:460px;margin:0 auto;filter:drop-shadow(0 30px 60px rgba(122,31,43,.25))}
+.hero-badge{position:absolute;background:#fff;padding:12px 18px;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.08);font-size:12px;font-weight:600}
+.hero-badge.b1{top:8%;left:0;color:var(--borgo)}
+.hero-badge.b2{bottom:12%;right:0}
+@media(max-width:880px){.hero-badge{display:none}}
+
+/* TRUST BAR */
+.trust{background:var(--tinta);color:var(--crema);padding:18px 0}
+.trust-grid{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;font-size:13px;letter-spacing:.05em;text-transform:uppercase;font-weight:500}
+.trust-grid span{opacity:.9}
+
+/* SECTIONS */
+section.block{padding:80px 0}
+.section-head{text-align:center;margin-bottom:50px}
+.section-head h2{font-size:clamp(30px,3.8vw,46px);margin-bottom:12px}
+.section-head p{color:var(--muted);max-width:580px;margin:0 auto;font-size:16px}
+
+/* PRODUCT GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:26px}
+.card{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--linea);transition:.3s;position:relative;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(26,22,18,.12)}
+.card-img{background:linear-gradient(135deg,#faf6ef,#efe5d6);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;overflow:hidden}
+.card-img img{max-height:100%;width:auto;transition:.4s;filter:drop-shadow(0 10px 20px rgba(0,0,0,.1))}
+.card:hover .card-img img{transform:scale(1.06)}
+.card-tag{position:absolute;top:12px;left:12px;background:var(--borgo);color:#fff;padding:5px 12px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.card-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:18px;font-weight:600}
+.card-body .sub{font-size:13px;color:var(--muted);min-height:38px}
+.card-feats{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.card-feats span{font-size:11px;background:var(--crema-2);color:var(--texto);padding:4px 9px;border-radius:6px}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;border-top:1px dashed var(--linea)}
+.price{font-family:'Fraunces',serif;font-size:24px;color:var(--borgo);font-weight:700}
+.buy{background:var(--tinta);color:#fff;padding:9px 16px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.05em;transition:.2s}
+.buy:hover{background:var(--borgo)}
+
+/* BRAND STORY */
+.story{background:#fff;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:880px){.story-grid{grid-template-columns:1fr;gap:30px}}
+.story h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:18px}
+.story p{margin-bottom:14px;color:var(--texto);font-size:16px}
+.story .badge-list{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.badge-list li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:14px}
+.badge-list svg{flex-shrink:0;color:var(--borgo);margin-top:3px}
+.story-img{background:linear-gradient(135deg,#efe5d6,#e8d5b8);border-radius:24px;padding:40px;text-align:center}
+.story-img img{max-width:280px;margin:0 auto}
+
+/* PAYMENT */
+.payment{background:var(--tinta);color:var(--crema);padding:70px 0}
+.payment .section-head h2{color:#fff}
+.payment .section-head p{color:rgba(246,239,230,.7)}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:30px}
+.pay-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px}
+.pay-card h4{color:#fff;font-size:18px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.pay-card p{font-size:14px;color:rgba(246,239,230,.85);line-height:1.7}
+.pay-card strong{color:#fff;font-weight:600}
+
+/* FOOTER */
+footer{background:#0e0b08;color:#a59686;padding:50px 0 30px;font-size:13px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:30px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid h5{color:#fff;font-family:'Fraunces',serif;font-size:16px;margin-bottom:14px}
+.foot-grid a{display:block;padding:4px 0;color:#a59686}
+.foot-grid a:hover{color:var(--crema)}
+.foot-bottom{border-top:1px solid #2a2118;padding-top:20px;text-align:center;color:#6b5d52;font-size:12px}
+
+/* WhatsApp Float */
+.wa-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.4);z-index:100;transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#" class="brand">
+      <img src="images/logo.png" alt="Starpil Lyznyz Academia" />
+      <div class="brand-text">
+        <strong>Starpil</strong>
+        <span>Lyznyz Academia</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#tienda">Tienda</a>
+      <a href="#marca">La marca</a>
+      <a href="#pago">Pago y envío</a>
+      <a href="#formacion">Formación</a>
+    </nav>
+    <a class="cta-wa" href="https://wa.me/584120162096" target="_blank" rel="noopener" onclick="fbq('track','Contact')">WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Distribuidor oficial · Venezuela</span>
+      <h1>Depilación profesional <em>Starpil</em>, ahora en tu cabina.</h1>
+      <p>Ceras, pre y post depilatorios de referencia mundial — seleccionados y distribuidos por <strong>Lyznyz Academia</strong> para profesionales que no aceptan menos.</p>
+      <div class="hero-ctas">
+        <a href="#tienda" class="btn btn-primary" onclick="fbq('track','ViewContent')">Ver catálogo</a>
+        <a href="https://wa.me/584120162096" target="_blank" rel="noopener" class="btn btn-outline" onclick="fbq('track','Lead')">Asesoría por WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <span class="hero-badge b1">★ Pigmentos irisados</span>
+      <img src="images/roll-on-irisados.png" alt="Cera Roll On con Pigmentos Irisados Starpil" />
+      <span class="hero-badge b2">Pago en VES y USD</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="container trust-grid">
+    <span>✓ Producto 100% original</span>
+    <span>✓ Envíos a toda Venezuela</span>
+    <span>✓ Pago Móvil · Zelle · Binance</span>
+    <span>✓ Asesoría profesional</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="block" id="tienda">
+  <div class="container">
+    <div class="section-head">
+      <h2>Catálogo Starpil</h2>
+      <p>Producto profesional listo para tu cabina o gabinete. Precios en USD, equivalente en Bolívares al momento del pago.</p>
+    </div>
+    <div class="grid" id="product-grid"></div>
+  </div>
+</section>
+
+<!-- BRAND -->
+<section class="story block" id="marca">
+  <div class="container story-grid">
+    <div>
+      <span class="eyebrow">Sobre la marca</span>
+      <h2>Calidad española, criterio profesional venezolano.</h2>
+      <p>Starpil es una marca con presencia internacional reconocida por la calidad de sus ceras y cosmética depilatoria. En Venezuela, Lyznyz Academia selecciona y distribuye su línea profesional para esteticistas, centros y estudiantes.</p>
+      <p>Trabajamos solo con producto original, asesoramos cada compra y respaldamos cada pedido.</p>
+      <ul class="badge-list">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Producto profesional original, no clon ni reenvasado.</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Soporte de Lyznyz Academia con formación y técnica.</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Atención directa por WhatsApp antes y después de tu compra.</span></li>
+      </ul>
+    </div>
+    <div class="story-img">
+      <img src="images/cera-creamy-pink.png" alt="Cera Creamy Pink Starpil" />
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="payment" id="pago">
+  <div class="container">
+    <div class="section-head">
+      <h2>Cómo pagar y recibir</h2>
+      <p>Tres pasos, sin complicaciones. Confirmas tu pedido por WhatsApp y coordinamos pago + envío.</p>
+    </div>
+    <div class="pay-grid">
+      <div class="pay-card">
+        <h4>① Pago Móvil (Bs)</h4>
+        <p><strong>Bancamiga · 0172</strong><br>Titular: Lyznyz Academia<br>Cédula: a coordinar por WhatsApp<br>Tasa Binance Venezuela del día.</p>
+      </div>
+      <div class="pay-card">
+        <h4>② Zelle / Binance (USD)</h4>
+        <p>Aceptamos <strong>Zelle</strong> y <strong>Binance Pay</strong>.<br>Te enviamos los datos al confirmar el pedido por WhatsApp para mantener la información segura.</p>
+      </div>
+      <div class="pay-card">
+        <h4>③ Envío</h4>
+        <p><strong>Caracas:</strong> delivery o punto de encuentro.<br><strong>Interior:</strong> MRW / Zoom con guía a tu nombre.<br>Despachamos en 24–48 h tras confirmar pago.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMACION -->
+<section class="block" id="formacion" style="background:var(--crema-2)">
+  <div class="container" style="text-align:center;max-width:720px">
+    <span class="eyebrow">Formación · Lyznyz Academia</span>
+    <h2 style="font-size:clamp(28px,3.4vw,42px);margin:14px 0 18px">No solo te vendemos producto. Te enseñamos a usarlo bien.</h2>
+    <p style="color:var(--muted);font-size:16px;margin-bottom:28px">Cursos presenciales y online de depilación profesional con cera Starpil — técnica, higiene, protocolos por zona y manejo de piel sensible. Para quienes ya trabajan y para quienes empiezan.</p>
+    <a href="https://wa.me/584120162096?text=Hola%2C%20quiero%20información%20de%20los%20cursos%20de%20Lyznyz%20Academia" target="_blank" rel="noopener" class="btn btn-primary" onclick="fbq('track','Lead')">Quiero información de los cursos</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h5>Starpil · Lyznyz Academia</h5>
+        <p style="line-height:1.7">Distribución oficial Starpil en Venezuela. Producto profesional para esteticistas, centros y estudiantes con respaldo y formación de Lyznyz Academia.</p>
+      </div>
+      <div>
+        <h5>Navegar</h5>
+        <a href="#tienda">Tienda</a>
+        <a href="#marca">Sobre la marca</a>
+        <a href="#pago">Pago y envío</a>
+        <a href="#formacion">Formación</a>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <a href="https://wa.me/584120162096" target="_blank" rel="noopener">WhatsApp 0412-0162096</a>
+        <a href="https://instagram.com/lyznyz.academia" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="year"></span> Lyznyz Academia · Distribuidor oficial Starpil · Hecho con cuidado en Venezuela.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/584120162096" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp" onclick="fbq('track','Contact')">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5s.1-.4 0-.5c-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.2L2 22l4.9-1.3c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script>
+const products = [
+  {slug:"gel-prepil",name:"Gel Prepil",sub:"Pre depilatorio · textura fresca",price:15,img:"gel-prepil.png",tag:"Pre",feats:["Prepara","Hidrata","Higieniza"]},
+  {slug:"crema-acida",name:"Crema Ácida Post Epil 200ml",sub:"Post depilatoria · reequilibra el PH",price:15,img:"crema-acida.png",tag:"Post",feats:["Regenera","Hidrata","Regula PH"]},
+  {slug:"roll-on-cremoso",name:"Cera Roll On Cremoso",sub:"Roll-on · piel sensible",price:10,img:"roll-on-cremoso.png",tag:"Cera",feats:["Sensible","Higiénico","Rápido"]},
+  {slug:"roll-on-irisados",name:"Cera Roll On Pigmentos Irisados",sub:"Roll-on · todo tipo de piel",price:10,img:"roll-on-irisados.png",tag:"Cera",feats:["Irisados","Higiénico","Duradero"]},
+  {slug:"cera-creamy-pink",name:"Cera en Lata Creamy Pink 500ml",sub:"Cera cremosa · pieles sensibles",price:25,img:"cera-creamy-pink.png",tag:"Lata",feats:["Sensible","Alto extracto","De raíz"]},
+  {slug:"cera-oro",name:"Cera en Lata Oro 500ml",sub:"Cera con pigmentos irisados",price:25,img:"cera-oro.png",tag:"Lata",feats:["Irisados","De raíz","Alto extracto"]},
+  {slug:"fundidor-facial",name:"Fundidor de Cera Facial",sub:"Equipo · 200 ml · 45-90°C",price:50,img:"fundidor-facial.png",tag:"Equipo",feats:["Compacto","Temperatura variable","Facial"]}
+];
+
+const grid = document.getElementById('product-grid');
+grid.innerHTML = products.map(p => `
+  <article class="card">
+    <div class="card-img">
+      <span class="card-tag">${p.tag}</span>
+      <img src="images/${p.img}" alt="${p.name}" loading="lazy"/>
+    </div>
+    <div class="card-body">
+      <h3>${p.name}</h3>
+      <p class="sub">${p.sub}</p>
+      <div class="card-feats">${p.feats.map(f=>`<span>${f}</span>`).join('')}</div>
+      <div class="card-foot">
+        <span class="price">${p.price} $</span>
+        <a class="buy" href="https://wa.me/584120162096?text=${encodeURIComponent('Hola, quiero pedir: '+p.name+' ('+p.price+' $)')}" target="_blank" rel="noopener" onclick="fbq('track','AddToCart',{content_name:'${p.name}',value:${p.price},currency:'USD'})">Pedir</a>
+      </div>
+    </div>
+  </article>
+`).join('');
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
